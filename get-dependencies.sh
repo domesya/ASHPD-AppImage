@@ -7,7 +7,8 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
-  clang
+  clang \
+  llvm20
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
