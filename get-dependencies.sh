@@ -8,15 +8,14 @@ echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
   clang \
-  llvm20
+  llvm20 \
+  libpipewire
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
 # Comment this out if you need an AUR package
-# wth
-export BINDGEN_EXTRA_CLANG_ARGS="-F/usr/include"
 make-aur-package ashpd-demo
 
 # If the application needs to be manually built that has to be done down here
