@@ -9,7 +9,8 @@ echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
   clang \
   llvm20 \
-  libpipewire
+  libpipewire \
+  base-devel
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
